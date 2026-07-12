@@ -1,0 +1,179 @@
+Sales Prediction using Python
+1. Introduction
+
+Sales prediction is one of the most important applications of Machine Learning in business analytics. It helps organizations estimate future sales based on historical advertising data. Accurate sales prediction enables companies to make better marketing decisions, allocate budgets efficiently, and maximize profits.
+
+In this project, a Linear Regression model is developed to predict product sales using advertising expenditure on TV, Radio, and Newspaper. The project covers data preprocessing, exploratory data analysis (EDA), visualization, model training, prediction, and performance evaluation.
+
+2. Objective
+
+The main objectives of this project are:
+
+To analyze the advertising dataset.
+To clean and preprocess the data.
+To visualize the relationship between advertising expenditure and sales.
+To build a Linear Regression model for predicting sales.
+To evaluate the model using standard regression metrics.
+To understand which advertising medium has the greatest impact on sales.
+3. Dataset Description
+
+The dataset used in this project is Advertising.csv.
+
+It contains advertising budgets for different media platforms and the corresponding sales achieved.
+
+Dataset Information
+Dataset Name: Advertising.csv
+Total Records: 200
+Total Features (after cleaning): 4
+Missing Values: 0
+Duplicate Records: 0
+Dataset Features
+Feature	Description
+TV	Advertising budget spent on TV (in thousands of dollars)
+Radio	Advertising budget spent on Radio
+Newspaper	Advertising budget spent on Newspaper
+Sales	Product sales (Target Variable)
+4. Data Preprocessing
+
+Several preprocessing steps were performed before building the machine learning model.
+
+Data Cleaning
+Loaded the dataset using Pandas.
+Removed the unnecessary Unnamed: 0 column.
+Checked for missing values.
+Checked for duplicate records.
+No missing or duplicate values were found.
+Statistical Analysis
+
+Basic statistical analysis was performed using the describe() function to understand the distribution of numerical features.
+
+The statistics included:
+
+Mean
+Standard Deviation
+Minimum Value
+Maximum Value
+Quartiles
+5. Exploratory Data Analysis (EDA)
+
+Exploratory Data Analysis was performed to understand relationships between variables.
+
+Figure 1: Sales Distribution
+
+(Insert sales_distribution.png Here)
+
+Explanation
+
+The histogram shows the distribution of product sales. Most sales values lie between 10 and 18 units, while very low and very high sales occur less frequently. The distribution is approximately normal with slight skewness.
+
+Figure 2: TV Advertising vs Sales
+
+(Insert tv_vs_sales.png Here)
+
+Explanation
+
+The scatter plot shows a strong positive relationship between TV advertising expenditure and product sales. As TV advertising budget increases, sales generally increase. This indicates that TV advertising has a significant influence on sales performance.
+
+Figure 3: Radio Advertising vs Sales
+
+(Insert radio_vs_sales.png Here)
+
+Explanation
+
+The relationship between Radio advertising and Sales is also positive. Although the correlation is slightly weaker than TV advertising, Radio marketing still contributes significantly to increasing product sales.
+
+Figure 4: Correlation Heatmap
+
+(Insert heatmap.png Here)
+
+Explanation
+
+The heatmap displays the correlation among all numerical variables.
+
+Important observations:
+
+TV has a strong positive correlation with Sales.
+Radio also has a positive correlation with Sales.
+Newspaper has a comparatively weaker relationship with Sales.
+
+This suggests that TV advertising is the most influential feature for predicting sales.
+
+Figure 5: Actual vs Predicted Sales
+
+(Insert actual_vs_predicted.png Here)
+
+Explanation
+
+The Actual vs Predicted graph compares the real sales values with the values predicted by the Linear Regression model. Most predicted points are close to the actual values, indicating good model performance.
+
+6. Machine Learning Model
+
+A Linear Regression algorithm was selected for this project because the target variable (Sales) is continuous.
+
+The dataset was divided into:
+
+Training Data: 80%
+Testing Data: 20%
+
+The model was trained using the training dataset and evaluated on the testing dataset.
+
+7. Model Performance
+
+The trained model was evaluated using three commonly used regression metrics.
+
+Mean Absolute Error (MAE)
+
+1.46
+
+This indicates that, on average, the predicted sales differ from the actual sales by approximately 1.46 units.
+
+Mean Squared Error (MSE)
+
+3.17
+
+The MSE measures the average squared prediction error. A lower value indicates better prediction accuracy.
+
+R² Score
+
+0.8994 (89.94%)
+
+The model explains approximately 89.94% of the variation in product sales, indicating excellent predictive performance.
+
+8. Key Findings
+
+The following observations were made from the analysis:
+
+TV advertising has the strongest impact on product sales.
+Radio advertising also contributes positively to sales.
+Newspaper advertising has the weakest influence on sales.
+The dataset contains no missing or duplicate values.
+The Linear Regression model achieved high prediction accuracy with an R² score of 89.94%.
+9. Conclusion
+
+This project successfully demonstrates how Machine Learning can be used for sales prediction. The dataset was cleaned, analyzed, and visualized before training a Linear Regression model. The model achieved an R² Score of 89.94%, indicating excellent predictive capability.
+
+Sales prediction helps businesses optimize advertising budgets, improve marketing strategies, and make informed business decisions.
+
+10. Technologies Used
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
+VS Code
+11. Future Scope
+
+This project can be improved in several ways:
+
+Apply advanced regression algorithms such as Random Forest Regressor or XGBoost.
+Use a larger real-world advertising dataset.
+Perform feature engineering to improve prediction accuracy.
+Build a web application using Flask or Streamlit for real-time sales prediction.
+Deploy the trained model on cloud platforms such as AWS, Azure, or Heroku.
+12. References
+Python Documentation
+Pandas Documentation
+Scikit-learn Documentation
+Matplotlib Documentation
+Seaborn Documentation
